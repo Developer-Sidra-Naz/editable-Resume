@@ -1,0 +1,130 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f4f6;
+    color: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+    box-sizing: border-box;
+}
+
+/* Form Container */
+.cv-container {
+    width: 90%;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    line-height: 1.6;
+    box-sizing: border-box; /* Ensures padding fits within width */
+}
+
+/* Header */
+h1 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: 600;
+    color: #1abc9c;
+    margin-bottom: 20px;
+}
+
+/* Section Headings */
+h2 {
+    font-size: 24px;
+    color: #34495e;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #1abc9c;
+    padding-bottom: 5px;
+    margin-top: 20px;
+}
+
+/* Labels and Inputs */
+label {
+    font-size: 16px;
+    font-weight: 500;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    background-color: #f9f9fb;
+    box-shadow: inset 5px 5px 10px rgba(0, 0, 0, 0.1), inset -5px -5px 10px rgba(255, 255, 255, 0.8);
+    resize: none;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(145deg, #1abc9c, #16a085);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2), -5px -5px 15px rgba(255, 255, 255, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(145deg, #16a085, #1abc9c);
+    transform: scale(1.03);
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .cv-container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    label, input, textarea {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+    }
+}
+
+/* Styles for Printing and Saving as PDF */
+@media print {
+    button, h1 {
+        display: none;
+    }
+
+    .cv-container {
+        width: 100%;
+        padding: 0;
+        box-shadow: none;
+    }
+
+    h2 {
+        border-bottom: 2px solid #1abc9c;
+        padding-bottom: 5px;
+    }
+}
+#downloadPdf {
+    display: none;
+}
